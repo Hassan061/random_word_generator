@@ -1,0 +1,19 @@
+classDiagram
+    class WordGenerator{
+        +str current_word
+        +bool is_running
+        +__init__()
+        +start()
+        +stop()
+        +generate_word(): str
+    }
+    class GUI{
+        +Tkinter.Tk root
+        +Tkinter.Label word_label
+        +Tkinter.Button start_stop_button
+        +WordGenerator word_generator
+        +__init__(WordGenerator)
+        +start_stop()
+        +update_word()
+    }
+    GUI "1" -- "1" WordGenerator: has
